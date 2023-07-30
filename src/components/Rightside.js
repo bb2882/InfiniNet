@@ -72,39 +72,44 @@ const Title = styled.div`
 `;
 
 const FeedList = styled.ul`
-	margin-top: 16px;
-	li {
-		display: flex;
-		align-items: center;
-		margin: 12px 0;
-		position: relative;
-		font-size: 14px;
+  margin-top: 16px;
+  li {
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+    position: relative;
+    font-size: 14px;
 
-		& > div {
-			display: flex;
-			flex-direction: column;
-		}
+    & > div {
+      display: flex;
+      flex-direction: column;
+    }
 
-		button {
-			background-color: transparent;
-			color: rgba(0, 0, 0, .6);
-			box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .6);
-			padding: 16px;
-			align-items: center;
-			border-radius: 15px;
-			box-sizing: border-box;
-			font-weight: 600;
-			display: inline-flex;
-			justify-content: center;
-			max-height: 32px;
-			max-width: 480px;
-			text-align: center;
-			outline: none;
-			border: 1px solid rgba(0, 0, 0, .6);
-			margin-top: 5px;
-		}
-	}
-`
+    button {
+      background-color: transparent;
+      color: rgba(0, 0, 0, 0.6);
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
+      padding: 16px;
+      align-items: center;
+      border-radius: 15px;
+      box-sizing: border-box;
+      font-weight: 600;
+      display: inline-flex;
+      justify-content: center;
+      max-height: 32px;
+      max-width: 480px;
+      text-align: center;
+      outline: none;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      margin-top: 5px;
+      transition-duration: 167ms;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+    }
+  }
+`;
 
 const Avatar = styled.div`
   background-image: url("https://static-exp1.licdn.com/sc/h/1b4vl1r54ijmrmcyxzoidwmxs");
