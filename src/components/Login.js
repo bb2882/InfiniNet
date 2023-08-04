@@ -46,15 +46,6 @@ const Nav = styled.nav`
 	justify-content: space-between;
 	flex-wrap: nowrap;
 
-	/* & > a {
-		width: 135px;
-		height: 34px;
-		
-		@media (max-width: 768px) {
-			padding: 0 5px;
-		}
-	} */
-
 	& > a > img {
 		width: 135px;
 		height: 34px;
@@ -174,8 +165,6 @@ const Google = styled.button`
 	height: 56px;
 	width: 100%;
 	border-radius: 28px;
-    /* box-shadow: inset 0 0 0 1px rgb(0 0 0 / 60%), */
-    /* inset 0 0 0 2px rgb(0 0 0 / 0%), inset 0 0 0 1px rgb(0 0 0 / 0); */
 	vertical-align: middle;
 	z-index: 0;
 	transition-duration: 167ms;

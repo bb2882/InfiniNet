@@ -4,12 +4,12 @@ import 'firebase/compat/firestore';
 import 'firebase/compat/storage';
 
 const firebaseConfig = {
-	apiKey: "AIzaSyAezK4UDmTZIQQURCL_aVpObixKR8LmY8g",
-	authDomain: "infininet-ef987.firebaseapp.com",
-	projectId: "infininet-ef987",
-	storageBucket: "infininet-ef987.appspot.com",
-	messagingSenderId: "389127107829",
-	appId: "1:389127107829:web:e530900ec967ae159f81bc"
+	apiKey: process.env.FIREBASE_API_KEY,
+	authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+	projectId: process.env.FIREBASE_PROJECT_ID,
+	storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+	messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+	appId: process.env.FIREBASE_APP_ID,
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig)
