@@ -53,6 +53,7 @@ const Section = styled.section`
 		color: #0a66c2;
 		font-size: 14px;
 		text-decoration: underline;
+
 		a {
 			font-weight: 700;
 		}

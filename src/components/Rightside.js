@@ -7,7 +7,7 @@ const Rightside = (props) => {
 
 				<Title>
 					<h2>Add to your feed</h2>
-					<img src="/images/feed-icon.svg" alt="" />
+					<a href="#"><img src="/images/feed-icon.svg" alt="feed" /></a>
 				</Title>
 
 				<FeedList>
@@ -39,7 +39,7 @@ const Rightside = (props) => {
 			</FollowCard>
 
 			<BannerCard>
-				<img src="/images/job.jpg" alt="banner" />
+				<a href="#"><img src="/images/job.jpg" alt="banner" /></a>
 			</BannerCard>
 
 		</Container>
@@ -72,53 +72,62 @@ const Title = styled.div`
 `;
 
 const FeedList = styled.ul`
-  margin-top: 16px;
-  li {
-    display: flex;
-    align-items: center;
-    margin: 12px 0;
-    position: relative;
-    font-size: 14px;
+	margin-top: 16px;
 
-    & > div {
-      display: flex;
-      flex-direction: column;
-    }
+	li {
+		display: flex;
+		align-items: center;
+		margin: 12px 0;
+		position: relative;
+		font-size: 14px;
 
-    button {
-      background-color: transparent;
-      color: rgba(0, 0, 0, 0.6);
-      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
-      padding: 16px;
-      align-items: center;
-      border-radius: 15px;
-      box-sizing: border-box;
-      font-weight: 600;
-      display: inline-flex;
-      justify-content: center;
-      max-height: 32px;
-      max-width: 480px;
-      text-align: center;
-      outline: none;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      margin-top: 5px;
-      transition-duration: 167ms;
+		& > div {
+			display: flex;
+			flex-direction: column;
+		}
 
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.08);
-      }
-    }
-  }
+		button {
+			background-color: transparent;
+			color: rgba(0, 0, 0, 0.6);
+			box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
+			padding: 16px;
+			align-items: center;
+			border-radius: 15px;
+			box-sizing: border-box;
+			font-weight: 600;
+			display: inline-flex;
+			justify-content: center;
+			max-height: 32px;
+			max-width: 480px;
+			text-align: center;
+			outline: none;
+			border: 1px solid rgba(0, 0, 0, 0.08);
+			margin-top: 5px;
+			cursor: pointer;
+			transition-duration: 167ms;
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.08);
+			}
+		}
+
+		span {
+			display: flex;
+			margin-left: 3px;
+			cursor: pointer;
+		}
+	}
 `;
 
 const Avatar = styled.div`
-  background-image: url("https://static-exp1.licdn.com/sc/h/1b4vl1r54ijmrmcyxzoidwmxs");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 48px;
-  height: 48px;
-  margin-right: 8px;
+	background-image: url("https://static-exp1.licdn.com/sc/h/1b4vl1r54ijmrmcyxzoidwmxs");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 48px;
+	height: 48px;
+	margin-right: 8px;
+	cursor: pointer;
 `;
 
 const Recommendation = styled.a`
@@ -126,6 +135,11 @@ const Recommendation = styled.a`
 	display: flex;
 	align-items: center;
 	font-size: 14px;
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: underline;
+	}
 `;
 
 const BannerCard = styled(FollowCard)`

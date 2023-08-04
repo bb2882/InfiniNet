@@ -22,42 +22,42 @@ const Header = (props) => {
 				<Nav>
 					<NavListWrap>
 						<NavList className='active'>
-							<a>
+							<a href="#">
 								<img src="/images/nav-home.svg" alt="home" />
 								<span>Home</span>
 							</a>
 						</NavList>
 
 						<NavList>
-							<a>
+							<a href="#">
 								<img src="/images/nav-network.svg" alt="network" />
 								<span>My Network</span>
 							</a>
 						</NavList>
 
 						<NavList>
-							<a>
+							<a href="#">
 								<img src="/images/nav-jobs.svg" alt="jobs" />
 								<span>Jobs</span>
 							</a>
 						</NavList>
 
 						<NavList>
-							<a>
+							<a href="#">
 								<img src="/images/nav-messaging.svg" alt="messaging" />
 								<span>Messaging</span>
 							</a>
 						</NavList>
 
 						<NavList>
-							<a>
+							<a href="#">
 								<img src="/images/nav-notifications.svg" alt="notifications" />
 								<span>Notifications</span>
 							</a>
 						</NavList>
 
 						<User>
-							<a> 
+							<a href="#"> 
 								{props.user && props.user.photoURL ? (
 									<img src={props.user.photoURL} alt="" /> 
 								) : (
@@ -75,7 +75,7 @@ const Header = (props) => {
 						</User>
 
 						<Work>
-							<a>
+							<a href="#">
 								<img src="/images/nav-work.svg" alt="work" />
 								<span>
 									Work 
@@ -202,7 +202,6 @@ const NavList = styled.li`
 	align-items: center;
 
 	a {
-		pointer-events: none;
 		align-items: center;
 		background: transparent;
 		display: flex;
@@ -238,7 +237,7 @@ const NavList = styled.li`
 
 const SignOut = styled.div`
 	position: absolute;
-	top: 45px;
+	top: 52px;
 	background: white;
 	border-radius: 0 0 5px 5px;
 	width: 100px;
@@ -247,6 +246,13 @@ const SignOut = styled.div`
 	transition-duration: 167ms;
 	text-align: center;
 	display: none;
+	cursor: pointer;
+	transition-duration: 167ms;
+
+	&:hover {
+		background-color: rgba(0, 0, 0, .15);
+		color: red;
+	}
 `;
 
 const User = styled(NavList)`

@@ -34,9 +34,9 @@ const Main = (props) => {
 
 				<div>
 					{ props.user && props.user.photoURL ? (
-						<img src={props.user.photoURL} alt="user" />
+						<a href="#"><img src={props.user.photoURL} alt="user" /></a>
 					) : (
-						<img src="/images/user.svg" alt="user" />
+						<a href="#"><img src="/images/user.svg" alt="user" /></a>
 					)}
 					<button onClick={handleClick} disabled = {props.loading ? true : false}>Start a post</button>
 				</div>
@@ -66,7 +66,7 @@ const Main = (props) => {
 			</ShareBox>
 
 			{ 
-				props.articles.length === 0 ? <p>There are no articles</p> :
+				props.articles.length === 0 ? <p style={{textAlign:'center'}}>There are no articles</p> :
 
 				<Content>
 
@@ -107,9 +107,7 @@ const Main = (props) => {
 								<li>
 									<button>
 										<img src="/images/like-icon.png" alt="like" />
-									
 										<img src="/images/clap-icon.png" alt="" />
-
 										<span>75</span>
 									</button>
 								</li>
@@ -179,6 +177,7 @@ const ShareBox = styled(CommonCard)`
 			outline: none;
 			color: rgba(0, 0, 0, .6);
 			font-size: 14px;
+			padding: 15px;
 			line-height: 1.5;
 			min-height: 48px;
 			background: transparent;
@@ -186,6 +185,13 @@ const ShareBox = styled(CommonCard)`
 			display: flex;
 			align-items: center;
 			font-weight: 600;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: 167ms;
+
+			&:hover {
+				background-color: rgba(0, 0, 0, .08);
+			}
 		}
 
 		&:first-child {
@@ -200,6 +206,7 @@ const ShareBox = styled(CommonCard)`
 			}
 
 			button {
+				padding: 0;
 				margin: 4px 0 ;
 				flex-grow: 1;
 				border-radius: 35px;
@@ -207,6 +214,10 @@ const ShareBox = styled(CommonCard)`
 				border: 1px solid rgba(0, 0, 0, .15);
 				background-color: #fff;
 				text-align: left;
+
+				&:hover {
+					background-color: rgba(0, 0, 0, .08);
+				}
 			}
 		}
 
@@ -218,11 +229,11 @@ const ShareBox = styled(CommonCard)`
 
 			button {
 				img {
-					margin: 0 5px 0 -2px;
+					margin: 0 10px 0 -2px;
 				}
 
 				span {
-					color: #70b5f9;
+					color: rgba(0, 0, 0, .6)
 				}
 			}
 		}
@@ -250,6 +261,7 @@ const SharedActor = styled.div`
 		text-decoration: none;
 
 		img {
+			cursor: pointer;
 			width: 48px;
 			height: 48px;
 		}
@@ -263,6 +275,7 @@ const SharedActor = styled.div`
 			overflow: hidden;
 
 			span {
+				cursor: pointer;
 				text-align: left;
 
 				&:first-child {
@@ -275,6 +288,10 @@ const SharedActor = styled.div`
 					font-size: 12px;
 					color: rgba(0, 0, 0, .6);
 				}
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 	}
@@ -286,6 +303,7 @@ const SharedActor = styled.div`
 		background: transparent;
 		border: none;
 		outline: none;
+		cursor: pointer;
 	}
 `;
 
@@ -314,7 +332,7 @@ const SharedImg = styled.div`
 const SocialCounts = styled.ul`
 	line-height: 1.3;
 	display: flex;
-	align-items: flex-start;
+	align-items: flex-end;
 	overflow: auto;
 	margin: 0 16px;
 	padding: 8px 0;
@@ -327,12 +345,32 @@ const SocialCounts = styled.ul`
 
 		button {
 			display: flex;
+			align-items: center;
 			border: none;
 			background-color: #fff;
+			cursor: pointer;
 
 			img {
 				width: 16px;
 				height: 16px;
+			}
+
+			&:hover {
+				color: #0a66c2;
+				text-decoration: underline;
+			}
+
+			span {
+				margin-left: 3px;
+			}
+		}
+
+		a {
+			cursor: pointer;
+
+			&:hover {
+				color: #0a66c2;
+				text-decoration: underline;
 			}
 		}
 	}
@@ -353,7 +391,13 @@ const SocialActions = styled.div`
 		color: #0a66c2;
 		border: none;
 		background-color: #fff;
+		cursor: pointer;
 		margin-left: 5px;
+		border-radius: 5px;
+
+		&:hover {
+			background-color: rgba(0, 0, 0, .08);
+		}
 
 		@media (min-width: 768px) {
 			span {

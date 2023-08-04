@@ -70,7 +70,7 @@ const PostModal = (props) => {
 								{props.user.photoURL ? (
 									<img src={props.user.photoURL} alt=""user />
 									) : (
-										<img src="/images/user.svg" alt="user" />
+									<img src="/images/user.svg" alt="user" />
 									)}
 								<span>{props.user.displayName}</span>
 							</UserInfo>
@@ -225,6 +225,7 @@ const UserInfo = styled.div`
 		background-clip: content-box;
 		border: 2px solid transparent;
 		border-radius: 50%;
+		cursor: pointer;
 	}
 
 	span {
@@ -232,6 +233,7 @@ const UserInfo = styled.div`
 		font-size: 16px;
 		line-height: 1.5;
 		margin: 5px;
+		cursor: pointer;
 	}
 `;
 
@@ -244,13 +246,23 @@ const ShareCreation = styled.div`
 const AssetButton = styled.button`
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	height: 40px;
+	background-color: #fff;
+	border: none;
 	min-width: auto;
+	cursor: pointer;
 	color: rgba(0, 0, 0, .5);
+	border-radius: 50px;
+	transition-duration: 167ms;
 
 	img {
 		width: 24px;
 		height: 24px;
+	}
+
+	&:hover {
+		background-color: rgba(0, 0, 0, .08);
 	}
 `;
 
@@ -296,6 +308,7 @@ const Editor = styled.div`
 	
 	textarea {
 		width: 100%;
+		padding: 5px;
 		min-height: 100px;
 		resize: none;
 		border-radius: 5px;
@@ -307,11 +320,12 @@ const Editor = styled.div`
 	}
 
 	input {
-		border:1px solid black;
+		margin-top: 1px;
+		border: 1px solid black;
 		width: 100%;
 		height: 35px;
+		padding-left: 5px;
 		font-size: 16px;
-		margin-bottom: 20px;
 		border-radius: 5px;
 
 		&:focus {
@@ -328,6 +342,24 @@ const UploadImage = styled.div`
 	img {
 		width: 100%;
 	}
+
+	p {
+		padding: 11px;
+		color: #0a66c2;
+
+		label {
+			padding: 11px;
+			border-radius: 5px;
+			cursor: pointer;
+			transition-duration: 167ms;
+			
+			&:hover {
+				background-color: rgba(10, 102, 194, .25);
+			}
+		}
+	}
+
+
 `;
 
 const mapStateToProps = state => {
