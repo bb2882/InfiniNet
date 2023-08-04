@@ -47,4 +47,3 @@ You can access the deployed version of Infininet right now without any installat
 We extend our heartfelt gratitude to the open-source community for their invaluable contributions and inspiration.
 
 ---
-
