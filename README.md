@@ -42,6 +42,51 @@ Follow these steps to run Infininet locally:
 
 You can access the deployed version of Infininet right now without any installations. Simply visit [InfiniNet](https://infininet-ef987.web.app/) and experience professional networking.
 
+## Deploying Infininet Website on Firebase Hosting
+
+To deploy the Infininet website on Firebase Hosting, follow these simple steps:
+
+### Step 1: Create a Firebase Project
+
+1. Visit the [Firebase website](https://firebase.google.com/) and click the "Go to console" button in the upper-right part of the site.
+
+2. Click the "Create a project" button, add a name for your project, and accept the terms before pressing the "Continue" button.
+
+### Step 2: Register Your App
+
+1. Click on "Settings" from the left sidebar, then navigate to the "Project settings" section.
+
+2. In the "Your apps" section, register your app.
+
+### Step 3: Get Your Firebase API Keys
+
+1. After registering your app, Firebase will provide you with a set of API keys required for authentication and other features.
+
+2. Create a `.env` file in the root folder of your project.
+
+3. Paste the API keys into the `.env` file following this format:
+
+```
+REACT_APP_FIREBASE_API_KEY = 'your_key_here'
+REACT_APP_FIREBASE_AUTH_DOMAIN = 'your_key_here'
+REACT_APP_FIREBASE_PROJECT_ID = 'your_key_here'
+REACT_APP_FIREBASE_STORAGE_BUCKET = 'your_key_here'
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID = 'your_key_here'
+REACT_APP_FIREBASE_APP_ID = 'your_key_here'
+```
+
+Replace `'your_key_here'` with the corresponding API keys you obtained from Firebase.
+
+### Step 4: Set Up Firebase Hosting
+
+Now that you have your API keys stored in the `.env` file, you are ready to set up Firebase Hosting for your Infininet website.
+
+Simply follow the official Firebase Hosting documentation to deploy your app. You can find detailed instructions [here](https://firebase.google.com/docs/hosting).
+
+That's it! Your Infininet website should now be successfully deployed on Firebase Hosting. Happy coding!
+
+**Note**: Make sure to keep your API keys safe and never share them publicly.
+
 ## Acknowledgements
 
 I do appreciate any contributions and inspiration.
