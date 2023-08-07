@@ -2,9 +2,10 @@
 
 ![Infininet Banner 1](https://github.com/bb2882/InfiniNet/assets/70382872/d2e647f3-5064-4bf9-b1d9-7b830988fb14)
 
-![Infininet Banner 2](https://github.com/bb2882/InfiniNet/assets/70382872/4acae84d-0341-4bc6-8ec0-363edb7248d1)
+![Infininet Banner 2](https://github.com/bb2882/InfiniNet/assets/70382872/0ddfe094-d816-454f-82d5-77eff25d163a)
 
-![Infininet Banner 3](https://github.com/bb2882/InfiniNet/assets/70382872/0ddfe094-d816-454f-82d5-77eff25d163a)
+![Infininet Banner 3](https://github.com/harutyunyanazat29/InfiniNet/assets/70382872/aff6354e-61a6-4ff2-aeea-dec39a335f08)
+
 
 Welcome to Infininet, a social networking platform that connects professionals from around the world. Share your thoughts, insights, and experiences with a community of like-minded individuals. Engage in meaningful discussions, showcase your accomplishments, and build valuable connections!
 
